@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express.js em node.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="./src/Trio.png" alt="">
+        <h1 class="title1">Tecnologia e Desenvolvimento</h1>
+        <nav class="menu-icon" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="28" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </nav>
+      </header>
+    
+      <!-- Menu Lateral (direito) -->
+      <aside class="side-menu" id="side-menu">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <ul>
+          <li><a href="#introducao-frameworks">Introdução</a>
+          <li><a href="#node">Node</a></li>
+          <li><a href="#express">Express</a></li>
+          <li><a href="#roteiro">Roteiro</a></li>
+          <li><a href="#video">Video</a></li>
+        </ul>
+      </aside>
+    
+      <section id="hero" class="hero-section">
+        <div class="hero-overlay">
+          <h1 >Express.js no Node.js</h1>
+          <p>Frameworks Backend: Seu Guia Completo para o Desenvolvimento de Soluções Poderosas</p>
+        </div>
+      </section>  
+      <section id="introducao-frameworks" class="introducao">
+        <div class="container">
+            <div class="intro-text">
+                <h2>Introdução a Frameworks Backend</h2>
+                <p>
+                    Os frameworks backend são ferramentas essenciais para o desenvolvimento de aplicações robustas e escaláveis. Eles fornecem uma estrutura predefinida para o servidor e simplificam o processo de criação de APIs, autenticação, conexão com bancos de dados e muito mais.
+                </p>
+                <p>
+                    Outro ponto importante é a produtividade que esses frameworks proporcionam. Com ferramentas como geração automática de código, roteamento simplificado e suporte a middlewares, os desenvolvedores conseguem reduzir o tempo necessário para construir aplicações funcionais e escaláveis. Além disso, a grande comunidade em torno dessas tecnologias oferece suporte contínuo, vasta documentação e pacotes adicionais que estendem ainda mais as funcionalidades dos frameworks backend.
+                </p>
+            </div>
+            <div class="intro-images">
+                <img src="./src/laravel.png" alt="Framework Backend 1" class="framework-img">
+                <img src="./src/django1.jpg" alt="Framework Backend 2" class="framework-img">
+            </div>
+        </div>
+    </section>
+
+    <h2 style="display: flex; justify-content: center; margin-top: 40px; font-size: 1.9rem;">Conheça nossa Framework</h1>
+    
+    <div class="container" id="node">
+        <section class="node">
+            <div class="text">
+                <h2>O que é Node.js?</h2>
+                <p>Antes de falarmos sobre o Express.js, é fundamental entender o que é o Node.js, já que o Express é um framework desenvolvido especificamente para ele.</p>
+                <p>Node.js é um ambiente de execução para JavaScript no lado do servidor, permitindo que desenvolvedores criem aplicações escaláveis e eficientes. Ele utiliza o motor V8 do Google Chrome para processar código JavaScript de maneira extremamente rápida.</p>
+                <p>Com o Node.js, é possível desenvolver APIs, aplicativos web, servidores e muito mais, tornando-se uma escolha popular para o desenvolvimento backend moderno. Seu modelo assíncrono e baseado em eventos possibilita alta performance e eficiência.</p>
+            </div>
+            <div class="image">
+                <img style="height: 400px;" src="./src/node.png" alt="Ilustração do Node.js">
+            </div>
+        </section>
+    </div>
+
+    <div class="container" id="express">
+        <div class="node">
+            <div class="image">
+                <img src="./src/expressJs.png" alt="Ilustração do Express.js" style="width: 500px;">
+            </div>
+            <div class="text">
+                <h2>O que é Express.js?</h2>
+                <p>Agora que entendemos o Node.js, podemos falar sobre o Express.js, um dos frameworks backend mais populares para essa tecnologia.</p>
+                <p>Express.js é um framework minimalista e eficiente para Node.js, projetado para facilitar a criação de APIs e servidores web. Ele fornece uma estrutura flexível, permitindo que desenvolvedores construam aplicações rapidamente.</p>
+                <p>Com Express, é possível lidar com requisições HTTP, configurar rotas, gerenciar middlewares e integrar bancos de dados de forma simples. Sua leveza e grande comunidade fazem dele a escolha ideal para projetos modernos e escaláveis.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="roteiro">
+        <div class="section">
+            <div class="text">
+                <h2>Roteiro do Vídeo</h2>
+                <p><h3>Explorando o Node.js e Express.js</h3>
+                    Duração: 5 a 10 minutos <br>
+                    
+                    <h3>1. Introdução: A importância dos frameworks no mundo do trabalho
+                    (1 a 2 min)</h3>
+                    
+                    [Murilo] Fala, galera! Sejam bem-vindos ao nosso vídeo sobre tecnologia e
+                    desenvolvimento! Hoje, a gente vai falar sobre um assunto essencial para
+                    qualquer programador que quer construir aplicações modernas e eficientes.
+                    
+                    [Helena] Isso mesmo! Vamos explorar o Express.js, um framework muito
+                    usado no Node.js. Mas, antes de falar do Express, a gente precisa entender
+                    um pouco mais sobre os frameworks em geral e por que eles são tão
+                    importantes no mercado de trabalho.
+                    
+                    [Quéren] Quando a gente desenvolve um sistema do zero, sem nenhuma
+                    ferramenta pronta, temos que escrever muitas linhas de código para
+                    resolver até os problemas mais básicos, como lidar com requisições HTTP,
+                    estruturar as pastas do projeto e conectar com um banco de dados.
+                    
+                    [Luany] E é aqui que entram os frameworks! Eles são conjuntos de
+                    ferramentas e bibliotecas que ajudam a gente a desenvolver sistemas de
+                    forma mais rápida, segura e organizada. No mundo profissional, usar
+                    frameworks é essencial, porque eles padronizam o código, facilitam a
+                    manutenção e aumentam a produtividade das equipes. <br>
+                    
+                    <h3>2. O que é um framework backend e suas funções? (1 a 2 min)</h3>
+                    
+                    [Helena] Beleza, agora que já sabemos a importância dos frameworks,
+                    vamos entender o que é um framework backend.
+                    
+                    6
+                    [Quéren] O backend é a parte do sistema que funciona “nos bastidores”.
+                    Ele recebe as informações do usuário, processa e envia uma resposta. É o
+                    backend que lida com bancos de dados, autenticação, segurança e regras
+                    de negócio.
+                    
+                    [Helena] E um framework backend facilita essa parte do trabalho. Ele já traz
+                    soluções prontas para criar APIs, gerenciar rotas, tratar requisições e
+                    conectar ao banco de dados, sem que a gente precise reinventar a roda
+                    toda vez que for criar um sistema.
+                    
+                    [Quéren] Alguns frameworks famosos de backend são Django (Python),
+                    Laravel (PHP), Spring Boot (Java) e, claro, o Express.js no Node.js. <br>
+                    
+                    <h3>3. Tipos de frameworks backend e arquiteturas (2 a 3 min)</h3>
+                    
+                    [Murilo] Existem três categorias principais de frameworks backend:
+                    • Full Stack Frameworks: São frameworks completos, que cuidam tanto do
+                    backend quanto do frontend. Exemplo: Django.
+                    • Microframeworks: São mais leves e flexíveis, focando apenas no backend,
+                    sem trazer tudo pronto. Exemplo: Express.js.
+                    • API Frameworks: São específicos para criar APIs REST.
+                    Exemplo: FastAPI (Python).
+                    
+                    [Luany] E onde o Express.js entra nisso? Ele é um microframework, porque
+                    é leve, flexível e focado no backend, permitindo que a gente escolha as
+                    ferramentas que quer usar.
+                    
+                    [Murilo] Agora, falando de arquiteturas, temos duas principais:
+                    • MVC (Model-View-Controller): Separa o código em três camadas: Model
+                    (dados), View (interface) e Controller (lógica).
+                    • MVVM (Model-View-ViewModel): É mais comum no frontend, ajudando a
+                    organizar o código da interface gráfica.
+                    
+                    7
+                    [Luany] O Express.js segue a arquitetura MVC, organizando o código de
+                    forma modular. Isso ajuda a manter os projetos organizados e facilita a
+                    manutenção do código.
+                    
+                    [Luany] Agora que entendemos tudo isso, bora finalmente entrar no Node.js
+                    e no Express! <br>
+                    
+                    <h3>4. O que é o Node.js? (2 a 3 min)</h3>
+                    
+                    [Helena] Vocês já estão acostumados a usar JavaScript no navegador,
+                    certo? Mas e se eu te dissesse que dá para usar JavaScript para rodar
+                    aplicações fora do navegador, tipo em servidores?
+                    
+                    [Luany] Pois é aí que entra o Node.js! Ele é um runtime que permite rodar
+                    JavaScript no servidor. Com isso, a gente pode criar aplicações completas
+                    sem precisar usar outras linguagens como PHP ou Java.
+                    
+                    [Luany] Além disso, o Node.js usa um conceito chamado event loop não
+                    bloqueante. Isso significa que ele consegue lidar com várias requisições ao
+                    mesmo tempo sem ficar travado, o que é ótimo para performance!
+                    
+                    [Helena] E, para facilitar a vida dos desenvolvedores, temos frameworks
+                    que ajudam na construção de aplicações. E é aqui que entra o Express.js! <br>
+                    
+                    <h3>5. O que é o Express.js? (2 a 3 min)</h3>
+                    
+                    [Quéren] O Express.js é um framework minimalista para Node.js. Ele facilita
+                    a criação de servidores web e APIs, deixando o código mais limpo e
+                    organizado.
+                    [Murilo] O Express é um microframework, ou seja, ele é leve e te dá
+                    flexibilidade para adicionar só as ferramentas que você realmente precisa.
+                    
+                    8
+                    [Quéren] Além disso, ele segue a arquitetura MVC, o que ajuda a manter o
+                    código organizado. <br>
+                    
+                   <h3> 6. Instalando e configurando o Express.js (2 a 3 min)</h3> 
+                    
+                    [Luany] Agora vamos para a prática! Para usar o Express, primeiro
+                    instalamos o Node.js e criamos um projeto:</p>
+
+                    <div class="image">
+                        <img src="./src/cmd.png" alt="Imagem ilustrativa do roteiro">
+                    </div>
+
+                    <p>[Quéren] Em seguida instalamos o Express:</p>
+
+                    <div class="image">
+                        <img src="./src/cmd2.png" alt="Imagem ilustrativa do roteiro">
+                    </div>
+
+                    <p>[Murilo] Agora criamos um servidor básico em server.js:</p>
+
+                    <div class="image">
+                        <img src="./src/nodeprog.png" alt="Imagem ilustrativa do roteiro">
+                    </div>
+
+                    <p>[Helena] E pronto! Só rodar node server.js e acessar http://localhost:3000
+                        no navegador! <br>
+                        
+                        <h3>7. Comparação com outros frameworks (1 a 2 min)</h3>
+                        
+                        [Murilo] O Express é leve e flexível, mas frameworks como Django, Rails e
+                        Laravel já vêm com muitas ferramentas embutidas.
+                        
+                        [Luany] Empresas como Uber, Netflix e PayPal usam Express.js nos seus
+                        sistemas! <br>
+                        
+                       <h3> 8. Conclusão (1 min)</h3>
+                        
+                        [Quéren] O Express.js facilita a criação de servidores e APIs no Node.js!
+                        
+                        [Helena] Testem o Express e continuem nos acompanhando! Até a próxima!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="video">
+        <div class="video-section">
+            <h2 style="font-size: 1.9rem;">Assista ao Vídeo</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JQ8kNN16ZW4?si=oEUwWpZUf7ddivUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+      
+
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+      </style>
+      <script src="script.js"></script>
+</body>
+</html>

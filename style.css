@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+  font-family: 'teste';
+  src: url('/Inlanders.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title1  {
+  font-family: 'teste', 'Times New Roman', serif;
+  font-size: 2.5rem;
+}
+
+  
+  body {
+        /* font-family: 'teste'; */
+      /* font-family: Arial, sans-serif; */
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .logo{
+        width: 80px;
+        height: 80px;
+        margin-left: 30px;
+    }
+  
+    
+    .section {
+      padding: 80px 20px;
+      min-height: 100vh;
+    }/*# sourceMappingURL=style.css.map */
+  
+  
+  .header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garantir que o header fique no topo, mas abaixo do menu */
+    height: 100px; /* Define a altura fixa do header */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8); /* Adiciona um leve sombreamento */
+  } 
+  
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .side-menu {
+    width: 300px;
+    background: linear-gradient(135deg, #444, #111);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Fora da tela por padrão */
+    transition: 0.4s;
+    z-index: 1500; /* Garantir que fique acima do header */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding-top: 30px;
+    color: white;
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 0 20px;
+  }
+  
+  .side-menu ul li {
+    margin: 20px 0;
+  }
+  
+  .side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .side-menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Botão de fechar no menu */
+  .close-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .close-btn:hover {
+    transform: rotate(90deg);
+  }
+  
+  
+  
+  /* Seção Hero */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh); /* Reduz a altura total da seção pela altura do header */
+    background: url(./src/frameworksREal.png) no-repeat center center/cover; /* Imagem de fundo */
+    filter: grayscale(40%); /* Efeito acinzentado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Sobreposição para o texto */
+  .hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido para destacar o texto */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Adiciona espaço nas bordas em telas menores */
+  }
+  
+  .hero-overlay h1 {
+    font-family: 'gemstone';
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-overlay p {
+    font-family: 'caviar';
+    font-size: 2rem;
+    line-height: 1;
+    max-width: 600px;
+  }
+  
+  /* Efeito de transição suave ao carregar */
+  .hero-section {
+    transform: scale(1.1);
+    animation: fadeInHero 1.5s ease forwards;
+  }
+  
+  @keyframes fadeInHero {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Estilo para a seção de introdução */
+#introducao-frameworks {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.introducao .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro-text h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #376f02;
+}
+
+.intro-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.intro-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.framework-img {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.framework-img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro-text h2 {
+        font-size: 28px;
+    }
+    
+    .intro-text p {
+        font-size: 16px;
+    }
+
+    .intro-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .framework-img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.node {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.text {
+    flex: 1;
+}
+.text h2 {
+    color: #333;
+}
+.text p {
+    color: #555;
+    line-height: 1.6;
+}
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.video-section {
+    text-align: center;
+}
+.video-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    color: #376f02;
+}
